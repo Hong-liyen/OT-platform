@@ -1,4 +1,4 @@
-# hello-world
+# OT-platform
 
 ## Project setup
 ```
