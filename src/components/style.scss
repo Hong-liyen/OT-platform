@@ -1,0 +1,131 @@
+$primary: #326cc8;
+// menu
+.menu {
+    width: 200px;
+    overflow: hidden;
+    background: linear-gradient(#326cc8, #449cd0);
+    .el-col{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+}
+
+.el-menu{
+    background: transparent;
+    border: 0;
+}
+
+.user{
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    h2{
+        font-weight: 500;
+    }
+    .user-photo{
+        width: 6rem;
+        border-radius: 100%;
+        border: 5px solid darken($primary, 10%);
+    }
+    p {
+        font-size: .875rem;
+    }   
+}
+
+.icon {
+    color: #fff;
+    margin-right: 5px;
+    width: 24px;
+}
+.el-submenu .el-menu-item {
+    background-color: #449cd0;
+    &:hover {
+        color: rgba($color: #fff, $alpha: .7);
+        background-color: darken(#449cd0,5%);
+    }
+}
+
+.el-submenu__title,.el-menu-item {
+    i {
+        color: #fff;
+    }
+}
+
+.el-menu-item,.el-submenu__title{
+    background-color: transparent;
+    color: #fff;
+    span,i {
+        color: #fff;
+    }
+    &:hover {
+        background-color: #fff;
+        span, i {
+            color: $primary;
+        }
+    }
+}
+
+.el-submenu__title:hover, .el-submenu__title:focus {
+    background-color: transparent !important;
+}
+
+// main
+.main{
+    width: calc(100% - 200px);
+}
+
+
+.breadcrumb {
+    background-color: #e4e4e4;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    .nav-item{
+        display: flex;
+    }
+    li {
+        list-style: none;
+        padding: 0 1rem;
+        a {
+            color: #666;
+        }
+    }
+    i {
+        padding-right: .25rem;
+    }
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - (1rem * 2) - 20px);
+}
+
+.user-info {
+    padding: 1.725rem;
+    color: #343434;
+    align-items: center;
+    .user-img {
+        text-align: center;
+        align-items: center;
+    }
+    img {
+        border-radius: 100%;
+        width: 35%;
+        margin-bottom: 1rem;
+    }
+    .input-name{
+        width: 20%;
+    }
+    .user-input {
+        padding-top: 1.25rem;
+        display: flex;
+        align-items: center;
+    }
+}
