@@ -32,17 +32,21 @@ export default {
   display: flex;
 }
 
-
 html,body {
     font-size: 14px;
     margin: 0;
     padding: 0;
+    min-width: 1024px;
+    overflow: hidden;
 }
 
-body {
+body,html {
     position: relative;
     width: 100%;
     height: 100%;
+    min-width: 1280px;
+    overflow: hidden;
+    overflow-x: auto; 
     font-family: "Arial", "Microsoft YaHei", "Microsoft JhengHei", "Heiti", sans-serif;    
     font-weight: normal;
 }

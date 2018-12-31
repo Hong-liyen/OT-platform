@@ -1,7 +1,7 @@
 <template>
   <div class="breadcrumb">
     <font-awesome-icon icon="bars"/>
-    <div class="nav-item">
+    <div class="nav-item hidden-xs-only">
       <li><font-awesome-icon icon="sync"/>在线人数：会员(214675)</li>
       <li><font-awesome-icon icon="power-off"/>退出</li>
       <li><font-awesome-icon icon="clock"/>时间：2018-05-09 03:35:40</li>
@@ -10,7 +10,6 @@
 </template>
 
 <script>
-
 export default {
   name: "Breadcrumb",
   data() {

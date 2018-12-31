@@ -2,15 +2,13 @@
   <div class="user-info">
     <el-col :span="8" class="user-img">
 			<img src="../assets/profile-photo.png" class="user-photo">
-      <!-- <el-upload class="upload-demo">
+      <el-upload
+        class="upload-demo"
+        @click="handleChange">
         <el-button size="small" type="primary">点击上传</el-button>
-      </el-upload> -->
+      </el-upload>
     </el-col>
-    <el-col :span="10">
-			<!-- <div class="user-input" v-for='(user,index) in userInput' :key='index'>
-        <div class="input-name">{{user.label}}</div>
-        <el-input placeholder=""></el-input>
-      </div> -->
+    <el-col :span="12">
       <div class="user-input">
         <div class="input-name">用户名</div>
         <el-input value="Amanda" disabled></el-input>
@@ -34,20 +32,23 @@
       <div class="user-input">
         <div class="input-name">新增日期</div>
         <el-date-picker
-      v-model="value6"
-      type="datetimerange"
-      start-placeholder="开始日期"
-      end-placeholder="结束日期"
-      :default-time="['12:00:00']">
-    </el-date-picker>
+          type="datetimerange"
+          start-placeholder="开始日期"
+          end-placeholder="结束日期"
+          :default-time="['12:00:00']">
+        </el-date-picker>
       </div>
       <div class="user-input">
         <div class="input-name">最后登录时间</div>
-        <el-input placeholder></el-input>
+        <el-date-picker
+        v-model="time"
+        type="date"
+        placeholder="选择日期">
+      </el-date-picker>
       </div>
       <div class="user-input">
         <div class="input-name">登录次数</div>
-        <el-input placeholder></el-input>
+        <el-input value="1" disabled></el-input>
       </div>
       <div class="user-input">
         <div class="input-name">余额</div>
@@ -64,6 +65,7 @@
           </el-table>
         </el-dialog>
       </div>
+      <el-button type="primary">确定</el-button>
     </el-col>
   </div>
 </template>
@@ -85,6 +87,7 @@ export default {
 			// 	{ label: '余额' },
 			// 	{ label: '返点比例' }
       // ]
+      time: new Date('2022-10-19'),
       rebateData: [{
           name: 'AG视讯',
           lowRebate: '0.1',

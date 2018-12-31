@@ -6,7 +6,7 @@
         <img src="../assets/profile-photo.png" class="user-photo">
         <p>你好！ Amanda, 欢迎登录</p>
         <el-input placeholder="搜索页面或功能" :span="4">
-          <i slot="suffix"><font-awesome-icon icon="search"/></i>
+          <!-- <i slot="suffix"><font-awesome-icon icon="search"/></i> -->
         </el-input>
       </div>
       <el-menu>
